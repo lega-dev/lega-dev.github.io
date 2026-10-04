@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lega Dev | Website and App Development</title>
+  <meta name="description" content="Lega Dev builds websites and web apps for small businesses and individuals.">
+
+  <style>
+    /* Colors live in one place. Change a value here and it updates everywhere. */
+    :root {
+      --bg: #fafaf9;
+      --card: #ffffff;
+      --text: #1c1917;
+      --muted: #57534e;
+      --border: #e7e5e4;
+      --accent: #2563eb;
+      --accent-dark: #1d4ed8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    /* ---------- Header and navigation ---------- */
+    header {
+      border-bottom: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* ---------- Sections ---------- */
+    section {
+      padding: 64px 0;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.15;
+      margin: 0 0 16px;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+      margin: 0 0 8px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      margin: 0 0 32px;
+      max-width: 620px;
+    }
+
+    /* ---------- Hero ---------- */
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 0 28px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      background: var(--accent);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+    }
+
+    .button:hover {
+      background: var(--accent-dark);
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+      margin-left: 8px;
+    }
+
+    .button.secondary:hover {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    /* ---------- Cards (services, steps, projects) ---------- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.15rem;
+    }
+
+    .card p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-number {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #ffffff;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .alt {
+      background: var(--card);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .alt .card {
+      background: var(--bg);
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <!-- CHANGE ME: put your business name here -->
+      <a class="brand" href="#top">Lega Dev Websites and apps Development</a>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Intro / hero -->
+    <section class="hero">
+      <div class="container">
+        <h1>Websites and apps built for your business.</h1>
+        <p>
+          I design and build clear, fast websites and web apps for small
+          businesses and individuals, from a simple landing page to a custom
+          tool that does a specific job for you.
+        </p>
+        <a class="button" href="#contact">Start a project</a>
+        <a class="button secondary" href="#work">See my work</a>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="alt">
+      <div class="container">
+        <h2>What I build</h2>
+        <p class="section-intro">Three ways I can help, depending on where you are.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>Business websites</h3>
+            <p>A professional home on the web: who you are, what you offer, and how to reach you. Works on phones and computers.</p>
+          </div>
+          <div class="card">
+            <h3>Web apps</h3>
+            <p>Custom tools that run in the browser, like task trackers, simple booking pages, or calculators built around how you work.</p>
+          </div>
+          <div class="card">
+            <h3>Updates and fixes</h3>
+            <p>Already have a site that is out of date or broken? I can refresh the design, fix problems, and keep it running.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process">
+      <div class="container">
+        <h2>How we work together</h2>
+        <p class="section-intro">A simple process, so you always know what comes next.</p>
+        <div class="grid">
+          <div class="card">
+            <span class="step-number">1</span>
+            <h3>Talk it through</h3>
+            <p>We discuss what you need, who it is for, and what success looks like.</p>
+          </div>
+          <div class="card">
+            <span class="step-number">2</span>
+            <h3>Build and review</h3>
+            <p>I build it in stages and show you progress, so changes happen early rather than at the end.</p>
+          </div>
+          <div class="card">
+            <span class="step-number">3</span>
+            <h3>Launch</h3>
+            <p>Your site or app goes live at a real web address, and you know how to keep it up to date.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="alt">
+      <div class="container">
+        <h2>My work</h2>
+        <p class="section-intro">Projects I have built and published. More are on the way.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>To-do list app</h3>
+            <p>A simple task manager that runs in the browser. Add and delete tasks, and they are still there when you come back.</p>
+            <p>
+              <a class="button" href="https://lega-dev.github.io/todo-app/">View live</a>
+              <a class="button secondary" href="https://github.com/lega-dev/todo-app">Code</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <h2>Let's talk about your project</h2>
+        <p class="section-intro">
+          The best place to reach me right now is GitHub. You can see my
+          projects there and get in touch.
+        </p>
+        <!-- LATER: add a business email or contact form here when you are ready -->
+        <a class="button" href="https://github.com/lega-dev">Visit my GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      &copy; 2026 Lega Dev
+    </div>
+  </footer>
+</body>
+</html>
